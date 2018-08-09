@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
   web:
-    image: django-app 
+    image: grupo04hub/dockerbuilddjango 
     volumes:
       - .:/code
     ports:
