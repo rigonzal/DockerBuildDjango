@@ -1,4 +1,4 @@
-FROM python:3.5-alpine
+FROM python:3.6-alpine
 
 # Copy in your requirements file
 ADD requirements.txt /requirements.txt
@@ -16,7 +16,7 @@ RUN set -ex \
             linux-headers \
             pcre-dev \
             postgresql-dev \
-    && pyvenv /venv \
+    && pyvenv-3.6 /venv \
     && /venv/bin/pip install -U pip \
     && LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "/venv/bin/pip install --no-cache-dir -r /requirements.txt" \
     && runDeps="$( \
