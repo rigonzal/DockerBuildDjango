@@ -1,4 +1,6 @@
-Django
-uwsgi
 virtualenv
+Django
 psycopg2
+uwsgi
+
+
