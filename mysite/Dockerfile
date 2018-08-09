@@ -37,6 +37,10 @@ ADD . /code/
 # uWSGI will listen on this port
 EXPOSE 8000
 
+
+ENV PYTHONUNBUFFERED 1
+
+
 # Add any custom, static environment variables needed by Django or your settings file here:
 ENV DJANGO_SETTINGS_MODULE=mysite.settings
 

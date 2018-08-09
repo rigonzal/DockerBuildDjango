@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  db:
+    image: postgres
+  web:
+    image: grupo04hub/dockerbuilddjango
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
